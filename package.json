@@ -1,0 +1,42 @@
+{
+  "name": "money-in-my-wallet",
+  "version": "0.0.0",
+  "description": "Get wallet balance for 30+ cryptos",
+  "main": "dist/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./": {
+      "import": "./dist/index.js"
+    },
+    "./package.json": {
+      "import": "./package.json"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talentlessguy/money-in-my-wallet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talentlessguy/money-in-my-wallet/issues"
+  },
+  "homepage": "https://github.com/talentlessguy/money-in-my-wallet#readme",
+  "devDependencies": {
+    "tsup": "^4.8.11",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "engines": {
+    "node": ">=12.4"
+  }
+}

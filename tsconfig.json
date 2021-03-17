@@ -1,0 +1,12 @@
+{
+  "include": ["src", "./example.ts"],
+  "compilerOptions": {
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "preserveSymlinks": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["ESNext", "DOM"]
+  }
+}
