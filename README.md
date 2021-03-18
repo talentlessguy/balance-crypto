@@ -40,7 +40,7 @@ Result:
 
 | Asset                     | Service                      | Optional API key |
 | ------------------------- | ---------------------------- | ---------------- |
-| ETH                       | https://ethplorer.io         | ☑                |
+| ETH                       | https://ethplorer.io         | ✔️               |
 | ERC20 Tokens (except ETH) | https://tokenbalance.com     |                  |
-| BTC, DASH, LTC, DOGE      | https://blockcypher.com      | ☑                |
+| BTC, DASH, LTC, DOGE      | https://blockcypher.com      | ✔️               |
 | BTC-based tokens          | https://chainz.cryptoid.info |                  |
