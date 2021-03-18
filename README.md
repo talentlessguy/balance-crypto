@@ -1,19 +1,31 @@
 ![](logo.svg)
 
-# money-in-my-wallet
+# balance-crypto
 
 Get wallet balance for 300+ cryptos with a unified interface.
+
+### Comparison to [crypto-balances-2](https://github.com/danielheyman/crypto-balances):
+
+- 🔐 optional API keys support
+- 💙 written in TypeScript
+- ⚡ uses `node-fetch` instead of deprecated `request`
+- 📦 smaller library size
 
 ## Install
 
 ```sh
-pnpm i money-in-my-wallet
+# pnpm
+pnpm i balance-crypto
+# yarn
+yarn add balance-crypto
+# npm
+npm i balance-crypto
 ```
 
 ## Usage
 
 ```ts
-import { balance } from 'money-in-my-wallet'
+import { balance } from 'balance-crypto'
 
 balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', 'OPTIONAL_API_KEY').then((res) => console.log(res))
 ```

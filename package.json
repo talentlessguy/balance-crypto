@@ -1,7 +1,7 @@
 {
-  "name": "money-in-my-wallet",
+  "name": "balance-crypto",
   "version": "0.0.0",
-  "description": "Get wallet balance for 30+ cryptos",
+  "description": "Get wallet balance for 300+ cryptos with a unified interface",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -18,13 +18,24 @@
     }
   },
   "scripts": {
+    "prepare": "pnpm build",
     "build": "tsup src/index.ts --format esm --dts"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/talentlessguy/money-in-my-wallet.git"
   },
-  "keywords": [],
+  "keywords": [
+    "wallet",
+    "balance",
+    "crypto",
+    "bitcoin",
+    "ethereum",
+    "btc",
+    "litecoin",
+    "chainlink",
+    "dash"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
