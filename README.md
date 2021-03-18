@@ -1,3 +1,5 @@
+![](logo.svg)
+
 # money-in-my-wallet
 
 Get wallet balance for 300+ cryptos with a unified interface.
