@@ -12,8 +12,10 @@ export const service: Service = {
     return 'BTC'
   },
 
-  async fetch({ addr, coin }) {
+  async fetch({ addr, coin, verbose }) {
     const url = `https://chainz.cryptoid.info/${coin.toLowerCase()}/api.dws?q=getbalance&a=${addr}`
+
+    if (verbose) console.log(`Requesting ${url}`)
 
     const res = await fetch(url)
 

@@ -1,3 +1,3 @@
 import { balance } from './src/index'
 
-balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC').then((res) => console.log(res))
+balance('0xF75Ed978170dFa5ee3d71d95979a34C91CD7042e', 'LINK').then((res) => console.log(res))

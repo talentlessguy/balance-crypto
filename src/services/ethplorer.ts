@@ -8,8 +8,9 @@ export const service: Service = {
   symbol() {
     return 'ETH'
   },
-  async fetch({ addr, apiKey = 'freekey' }) {
+  async fetch({ addr, apiKey = 'freekey', verbose }) {
     const url = `https://api.ethplorer.io/getAddressInfo/${addr}?apiKey=${apiKey}`
+    if (verbose) console.log(`Requesting ${url}`)
     const res = await fetch(url)
 
     const json = await res.json()

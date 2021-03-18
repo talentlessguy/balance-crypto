@@ -17,12 +17,14 @@ export const service: Service = {
       D: 'DOGE'
     }[addr[0]]
   },
-  async fetch({ addr, apiKey }) {
+  async fetch({ addr, apiKey, verbose }) {
     const network = this.symbol(addr)
 
     const url = `https://api.blockcypher.com/v1/${network.toLowerCase()}/main/addrs/${addr}${
       apiKey ? `?token=${apiKey}` : ''
     }`
+
+    if (verbose) console.log(`Requesting ${url}`)
 
     const res = await fetch(url, { json: true })
 

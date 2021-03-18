@@ -44,11 +44,12 @@ type result = Partial<WalletInfo> & { error?: string }
  * @param addr Wallet address
  * @param coin Asset name (e.g. `ETH`)
  * @param apiKey Optional API key
- * @param verbose Verbose logging
+ * @param verbose Enable verbose logging
  */
 export const balance = async (addr: string, coin: string, apiKey?: string, verbose?: boolean) => {
   let addrType = ''
 
+  let found: boolean = false
   let result: result
   const runService = async (s: string, service: Service) => {
     const isSupported = service.supported.map((c) => c.toLowerCase()).includes(coin.toLowerCase())
@@ -58,6 +59,8 @@ export const balance = async (addr: string, coin: string, apiKey?: string, verbo
         const resp = await service.fetch({ addr, apiKey, coin, verbose })
 
         result = resp
+
+        found = true
       } catch (e) {
         result = { error: `${s}: ${e.message}` }
       }
@@ -67,8 +70,7 @@ export const balance = async (addr: string, coin: string, apiKey?: string, verbo
   }
 
   for (const [s, service] of Object.entries(services)) {
-    if (verbose) console.log(`Querying ${s}`)
-    if ((result as WalletInfo)?.asset) {
+    if (found) {
       break
     }
     await runService(s, service)

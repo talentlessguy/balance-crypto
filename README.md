@@ -22,13 +22,24 @@ yarn add balance-crypto
 npm i balance-crypto
 ```
 
-## Usage
+## Example
 
 ```ts
 import { balance } from 'balance-crypto'
 
 balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', 'OPTIONAL_API_KEY').then((res) => console.log(res))
 ```
+
+## API
+
+### `balance(addr, coin, key, verbose)`
+
+#### Options
+
+- **addr** - wallet address
+- **coin** - asset token
+- **key** - optional API key
+- **verbose** - enable verbose logging
 
 Result:
 
