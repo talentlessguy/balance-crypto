@@ -1,6 +1,6 @@
 # money-in-my-wallet
 
-Get wallet balance for 30+ cryptos with a unified interface.
+Get wallet balance for 300+ cryptos with a unified interface.
 
 ## Install
 
@@ -16,10 +16,17 @@ import { balance } from 'money-in-my-wallet'
 balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', 'OPTIONAL_API_KEY').then((res) => console.log(res))
 ```
 
+Result:
+
+```json
+{ "balance": 0, "asset": "BTC" }
+```
+
 ## Supported cryptos
 
-| Asset                | Service                  |
-| -------------------- | ------------------------ |
-| ETH                  | https://ethplorer.io     |
-| ERC20 Tokens         | https://tokenbalance.com |
-| BTC, DASH, LTC, DOGE | https://blockcypher.com  |
+| Asset                     | Service                      | Optional API key |
+| ------------------------- | ---------------------------- | ---------------- |
+| ETH                       | https://ethplorer.io         | ☑                |
+| ERC20 Tokens (except ETH) | https://tokenbalance.com     |                  |
+| BTC, DASH, LTC, DOGE      | https://blockcypher.com      | ☑                |
+| BTC-based tokens          | https://chainz.cryptoid.info |                  |

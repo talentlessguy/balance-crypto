@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "Get wallet balance for 30+ cryptos",
   "main": "dist/index.js",
-  "type": "module",
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.js"
