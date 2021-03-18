@@ -18,10 +18,20 @@ export type Service = {
   /**
    * Fetch data from the service and return the formatted response object
    */
-  fetch: ({ addr, apiKey, coin }: { addr: string; apiKey?: string; coin?: string }) => WalletInfo | Promise<WalletInfo>
+  fetch: ({
+    addr,
+    apiKey,
+    coin,
+    verbose
+  }: {
+    addr: string
+    apiKey?: string
+    coin?: string
+    verbose?: boolean
+  }) => WalletInfo | Promise<WalletInfo>
 }
 
-type result = WalletInfo | { error?: string }
+type result = Partial<WalletInfo> & { error?: string }
 
 /**
  * Get a crypto wallet balance.
@@ -45,7 +55,7 @@ export const balance = async (addr: string, coin: string, apiKey?: string, verbo
 
     if (isSupported && service.check(addr)) {
       try {
-        const resp = await service.fetch({ addr, apiKey, coin })
+        const resp = await service.fetch({ addr, apiKey, coin, verbose })
 
         result = resp
       } catch (e) {

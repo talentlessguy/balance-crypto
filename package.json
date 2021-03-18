@@ -1,6 +1,6 @@
 {
   "name": "balance-crypto",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "type": "module",
   "description": "Get wallet balance for 300+ cryptos with a unified interface",
   "main": "dist/index.js",

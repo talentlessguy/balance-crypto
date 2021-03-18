@@ -1062,10 +1062,13 @@ export const service: Service = {
   symbol() {
     return 'ETH'
   },
-  async fetch({ addr, coin }) {
+  async fetch({ addr, coin, verbose }) {
     const contract = contracts.find((x) => x.symbol === coin)
 
     const url = `https://api.tokenbalance.com/balance/${contract.address}/${addr}`
+
+    if (verbose) console.log(`Requesting ${url}`)
+
     const res = await fetch(url)
 
     const json = await res.json()
