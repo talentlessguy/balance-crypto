@@ -1,5 +1,5 @@
 import { Service } from '..'
-import stablecoin from 'stablecoin-api'
+import * as stablecoin from 'stablecoin-api'
 
 export const service: Service = {
   supported: ['USDC', 'BUSD', 'NGNT', 'ABCD'],

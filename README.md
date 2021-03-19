@@ -36,7 +36,6 @@ Result:
 { "balance": 0, "asset": "BTC" }
 ```
 
-
 ## API
 
 ### `balance(addr, coin, key, verbose)`
@@ -48,13 +47,12 @@ Result:
 - **key** - optional API key
 - **verbose** - enable verbose logging
 
-
 ## Supported cryptos
 
-| Asset                     | Service                      | Optional API key |
-| ------------------------- | ---------------------------- | ---------------- |
-| ETH                       | https://ethplorer.io         | ✔️               |
-| ERC20 Tokens (except ETH) | https://tokenbalance.com     |                  |
-| BTC, DASH, LTC, DOGE      | https://blockcypher.com      | ✔️               |
-| BTC-based tokens          | https://chainz.cryptoid.info |                  |
-| USDC, BUSD, NGNT, ABCD    | [stablecoin-api](https://github.com/richwednesday/stablecoin-api)               |                  |
+| Asset                     | Service                                                           | Optional API key |
+| ------------------------- | ----------------------------------------------------------------- | ---------------- |
+| ETH                       | https://ethplorer.io                                              | ✔️               |
+| ERC20 Tokens (except ETH) | https://tokenbalance.com                                          |                  |
+| BTC, DASH, LTC, DOGE      | https://blockcypher.com                                           | ✔️               |
+| BTC-based tokens          | https://chainz.cryptoid.info                                      |                  |
+| USDC, NGNT                | [stablecoin-api](https://github.com/talentlessguy/stablecoin-api) |                  |
