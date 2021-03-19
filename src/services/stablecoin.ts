@@ -9,10 +9,14 @@ export const service: Service = {
   symbol() {
     return 'ETH'
   },
-  async fetch({ addr, verbose, coin }) {
+  async fetch({ addr, verbose, coin, apiKey }) {
     if (verbose) console.log(`Getting ${coin} address balance`)
 
-    const balance = parseFloat(await stablecoin.balance(addr, coin))
+    const balance = parseFloat(
+      await stablecoin.balance(addr, coin, {
+        etherscan: apiKey
+      })
+    )
 
     return {
       asset: 'ETH',

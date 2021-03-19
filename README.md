@@ -55,4 +55,4 @@ Result:
 | ERC20 Tokens (except ETH) | https://tokenbalance.com                                          |                  |
 | BTC, DASH, LTC, DOGE      | https://blockcypher.com                                           | ✔️               |
 | BTC-based tokens          | https://chainz.cryptoid.info                                      |                  |
-| USDC, NGNT                | [stablecoin-api](https://github.com/talentlessguy/stablecoin-api) |                  |
+| USDC, NGNT                | [stablecoin-api](https://github.com/talentlessguy/stablecoin-api) | ✔️               |

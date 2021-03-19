@@ -1,6 +1,6 @@
 dependencies:
   node-fetch: 2.6.1
-  stablecoin-api: github.com/talentlessguy/stablecoin-api/ab75f4d8dc6c8839b2eedbc4f460d1ad335598d9
+  stablecoin-api: github.com/talentlessguy/stablecoin-api/4d066bc1a09abb4ac7b3585eb47da24a8ae37b5c
 devDependencies:
   tsup: 4.8.11_typescript@4.2.3
   typescript: 4.2.3
@@ -1217,13 +1217,13 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
-  github.com/talentlessguy/stablecoin-api/ab75f4d8dc6c8839b2eedbc4f460d1ad335598d9:
+  github.com/talentlessguy/stablecoin-api/4d066bc1a09abb4ac7b3585eb47da24a8ae37b5c:
     dependencies:
       ethers: 5.0.32
     dev: false
     name: stablecoin-api
     resolution:
-      tarball: https://codeload.github.com/talentlessguy/stablecoin-api/tar.gz/ab75f4d8dc6c8839b2eedbc4f460d1ad335598d9
+      tarball: https://codeload.github.com/talentlessguy/stablecoin-api/tar.gz/4d066bc1a09abb4ac7b3585eb47da24a8ae37b5c
     version: 1.0.0
 specifiers:
   node-fetch: ^2.6.1
