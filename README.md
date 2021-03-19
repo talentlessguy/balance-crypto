@@ -30,6 +30,13 @@ import { balance } from 'balance-crypto'
 balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', 'OPTIONAL_API_KEY').then((res) => console.log(res))
 ```
 
+Result:
+
+```json
+{ "balance": 0, "asset": "BTC" }
+```
+
+
 ## API
 
 ### `balance(addr, coin, key, verbose)`
@@ -41,11 +48,6 @@ balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', 'OPTIONAL_API_KEY').then((r
 - **key** - optional API key
 - **verbose** - enable verbose logging
 
-Result:
-
-```json
-{ "balance": 0, "asset": "BTC" }
-```
 
 ## Supported cryptos
 
@@ -55,3 +57,4 @@ Result:
 | ERC20 Tokens (except ETH) | https://tokenbalance.com     |                  |
 | BTC, DASH, LTC, DOGE      | https://blockcypher.com      | ✔️               |
 | BTC-based tokens          | https://chainz.cryptoid.info |                  |
+| USDC, BUSD, NGNT, ABCD    | [stablecoin-api](https://github.com/richwednesday/stablecoin-api)               |                  |

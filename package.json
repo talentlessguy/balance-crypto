@@ -1,7 +1,7 @@
 {
   "name": "balance-crypto",
-  "version": "0.0.7",
   "type": "module",
+  "version": "0.0.9",
   "description": "Get wallet balance for 300+ cryptos with a unified interface",
   "main": "dist/index.js",
   "files": [
@@ -48,7 +48,8 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "stablecoin-api": "^1.0.0"
   },
   "engines": {
     "node": ">=12.4"

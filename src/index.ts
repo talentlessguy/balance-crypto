@@ -49,16 +49,16 @@ type result = Partial<WalletInfo> & { error?: string }
 export const balance = async (addr: string, coin: string, apiKey?: string, verbose?: boolean) => {
   let addrType = ''
 
-  let found: boolean = false
+  if (coin !== coin.toUpperCase()) throw new Error('Asset name must be uppercase')
+
+  let found = false
   let result: result
   const runService = async (s: string, service: Service) => {
     const isSupported = service.supported.map((c) => c.toLowerCase()).includes(coin.toLowerCase())
 
     if (isSupported && service.check(addr)) {
       try {
-        const resp = await service.fetch({ addr, apiKey, coin, verbose })
-
-        result = resp
+        result = await service.fetch({ addr, apiKey, coin, verbose })
 
         found = true
       } catch (e) {
@@ -70,9 +70,8 @@ export const balance = async (addr: string, coin: string, apiKey?: string, verbo
   }
 
   for (const [s, service] of Object.entries(services)) {
-    if (found) {
-      break
-    }
+    if (found) break
+
     await runService(s, service)
   }
 

@@ -4,7 +4,7 @@ import { Service } from '../index'
 const multiplier = Math.pow(10, 8)
 
 export const service: Service = {
-  supported: ['BTC', 'LTC', 'DASH', 'DOGE'],
+  supported: ['BTC', 'LTC', 'DASH', 'DOGE', 'ETH'],
   check(addr) {
     return RegExp('^[LXD13][a-km-zA-HJ-NP-Z0-9]{26,33}$').test(addr)
   },

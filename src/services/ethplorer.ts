@@ -1,4 +1,5 @@
 import { Service } from '..'
+import fetch from 'node-fetch'
 
 export const service: Service = {
   supported: ['ETH'],
