@@ -2,7 +2,7 @@ import { Service } from '..'
 import * as stablecoin from 'stablecoin-api'
 
 export const service: Service = {
-  supported: ['USDC', 'BUSD', 'NGNT', 'ABCD'],
+  supported: ['USDC', 'NGNT'],
   check(addr) {
     return RegExp('^(0x)?[0-9a-fA-F]{40}$').test(addr)
   },

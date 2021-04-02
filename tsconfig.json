@@ -5,7 +5,7 @@
     "allowSyntheticDefaultImports": true,
     "preserveSymlinks": true,
     "target": "es2019",
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "lib": ["ESNext", "DOM"]
   }

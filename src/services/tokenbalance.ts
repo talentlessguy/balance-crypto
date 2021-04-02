@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 import { Service } from '../index'
 
-const contracts = [
+const contracts: { address: string; symbol: string; decimal: number }[] = [
   {
     address: '0xAf30D2a7E90d7DC361c8C4585e9BB7D2F6f15bc7',
     symbol: '1ST',
@@ -1051,6 +1051,11 @@ const contracts = [
     address: '0xe386b139ed3715ca4b18fd52671bdcea1cdfe4b1',
     symbol: 'ZST',
     decimal: 8
+  },
+  {
+    address: '0xc944e90c64b2c07662a292be6244bdf05cda44a7',
+    symbol: 'GRT',
+    decimal: 18
   }
 ]
 
