@@ -2,7 +2,6 @@
 
 # balance-crypto
 
-![Top lang][top-lang-badge-url]
 ![Vulnerabilities][vulns-badge-url]
 [![Version][v-badge-url]][npm-url]
 ![Last commit][last-commit-badge-url]
@@ -63,7 +62,6 @@ Result:
 | BTC-based tokens          | https://chainz.cryptoid.info                                      |                  |
 | USDC, NGNT                | [stablecoin-api](https://github.com/talentlessguy/stablecoin-api) | ✔️               |
 
-[top-lang-badge-url]: https://img.shields.io/github/languages/top/talentlessguy/balance-crypto.svg?style=flat-square
 [vulns-badge-url]: https://img.shields.io/snyk/vulnerabilities/npm/balance-crypto.svg?style=flat-square
 [v-badge-url]: https://img.shields.io/npm/v/balance-crypto.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/balance-crypto
