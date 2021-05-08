@@ -45,6 +45,7 @@
   },
   "homepage": "https://github.com/talentlessguy/money-in-my-wallet#readme",
   "devDependencies": {
+    "@types/node-fetch": "^2.5.10",
     "tsup": "^4.10.1",
     "typescript": "^4.2.4"
   },

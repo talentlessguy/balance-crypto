@@ -62,6 +62,7 @@ Result:
 | BTC, DASH, LTC, DOGE      | https://blockcypher.com                                           | ✔️               |
 | BTC-based tokens          | https://chainz.cryptoid.info                                      |                  |
 | USDC, NGNT                | [stablecoin-api](https://github.com/talentlessguy/stablecoin-api) | ✔️               |
+| ADA                       | https://explorer.cardano.org                                      |                  |
 
 [top-lang-badge-url]: https://img.shields.io/github/languages/top/talentlessguy/balance-crypto.svg?style=flat-square
 [vulns-badge-url]: https://img.shields.io/snyk/vulnerabilities/npm/balance-crypto.svg?style=flat-square

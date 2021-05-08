@@ -19,7 +19,7 @@ export const service: Service = {
 
     const res = await fetch(url)
 
-    if (res.statusCode < 200 || res.statusCode >= 300) throw new Error(JSON.stringify(res))
+    if (res.status < 200 || res.status >= 300) throw new Error(JSON.stringify(res))
 
     const json = await res.json()
 

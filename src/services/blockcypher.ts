@@ -26,11 +26,11 @@ export const service: Service = {
 
     if (verbose) console.log(`Requesting ${url}`)
 
-    const res = await fetch(url, { json: true })
+    const res = await fetch(url)
 
     const json = await res.json()
 
-    if (res.statusCode < 200 || res.statusCode >= 300) throw new Error(JSON.stringify(res))
+    if (res.status < 200 || res.status >= 300) throw new Error(JSON.stringify(res))
 
     return {
       balance: parseFloat(json.balance) / multiplier,
