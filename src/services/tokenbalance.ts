@@ -1056,6 +1056,16 @@ const contracts: { address: string; symbol: string; decimal: number }[] = [
     address: '0xc944e90c64b2c07662a292be6244bdf05cda44a7',
     symbol: 'GRT',
     decimal: 18
+  },
+  {
+    address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
+    symbol: 'AAVE',
+    decimal: 18
+  },
+  {
+    address: '0x5ca9a71b1d01849c0a95490cc00559717fcf0d1d',
+    symbol: 'AE',
+    decimal: 18
   }
 ]
 
