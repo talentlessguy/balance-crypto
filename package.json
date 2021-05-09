@@ -1,9 +1,9 @@
 {
   "name": "balance-crypto",
-  "version": "0.0.18",
-  "type": "module",
+  "version": "0.1.0",
   "description": "Get wallet balance for 300+ cryptos with a unified interface",
   "main": "dist/index.js",
+  "type": "module",
   "files": [
     "dist"
   ],
@@ -20,8 +20,11 @@
   },
   "scripts": {
     "prebuild": "rm -rf dist",
-    "prepare": "pnpm build",
-    "build": "tsup src/index.ts --format esm --dts"
+    "prepare": "npm run build && npm run test",
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "node --loader ts-node/esm --experimental-specifier-resolution=node node_modules/uvu/bin.js",
+    "test:coverage": "c8 --include=src pnpm test",
+    "test:report": "c8 report --reporter=text-lcov > coverage.lcov"
   },
   "repository": {
     "type": "git",
@@ -45,12 +48,14 @@
   },
   "homepage": "https://github.com/talentlessguy/money-in-my-wallet#readme",
   "devDependencies": {
-    "@types/node-fetch": "^2.5.10",
+    "c8": "^7.7.2",
+    "ts-node": "^9.1.1",
     "tsup": "^4.10.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "uvu": "^0.5.1"
   },
   "dependencies": {
-    "node-fetch": "^2.6.1",
+    "fetch-h2": "^2.5.1",
     "stablecoin-api": "github:talentlessguy/stablecoin-api"
   },
   "engines": {

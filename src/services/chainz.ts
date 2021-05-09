@@ -1,5 +1,5 @@
 import { Service } from '..'
-import fetch from 'node-fetch'
+import { fetch } from 'fetch-h2'
 
 export const service: Service = {
   supported: ['LTC', 'STRAT', 'DGB', 'BTC', 'DASH', 'LTC'],

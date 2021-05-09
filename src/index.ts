@@ -26,12 +26,10 @@ export type Service = {
   }: {
     addr: string
     apiKey?: string
-    coin?: string
+    coin: string
     verbose?: boolean
   }) => WalletInfo | Promise<WalletInfo>
 }
-
-type result = Partial<WalletInfo> & { error?: string }
 
 /**
  * Get a crypto wallet balance.
@@ -47,33 +45,17 @@ type result = Partial<WalletInfo> & { error?: string }
  * @param verbose Enable verbose logging
  */
 export const balance = async (addr: string, coin: string, apiKey?: string, verbose?: boolean) => {
-  let addrType = ''
+  coin = coin.toUpperCase()
+  for (const [s, service] of Object.entries(services)) {
+    const isSupported = service.supported.includes(coin)
 
-  if (coin !== coin.toUpperCase()) throw new Error('Asset name must be uppercase')
-
-  let found = false
-  let result: result
-  const runService = async (s: string, service: Service) => {
-    const isSupported = service.supported.map((c) => c.toLowerCase()).includes(coin.toLowerCase())
-
-    if (isSupported && service.check(addr)) {
-      try {
-        result = await service.fetch({ addr, apiKey, coin, verbose })
-
-        found = true
-      } catch (e) {
-        result = { error: `${s}: ${e.message}` }
+    if (isSupported) {
+      if (!service.check(addr)) {
+        throw new Error(`Invalid address "${addr}" for ${coin}`)
       }
+      const result = await service.fetch({ addr, apiKey, coin, verbose })
 
-      if (!addrType) addrType = service.symbol(addr)
+      return result
     }
   }
-
-  for (const [s, service] of Object.entries(services)) {
-    if (found) break
-
-    await runService(s, service)
-  }
-
-  return result
 }

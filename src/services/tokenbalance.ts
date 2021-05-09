@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+import { fetch } from 'fetch-h2'
 import { Service } from '../index'
 
 const contracts: { address: string; symbol: string; decimal: number }[] = [
@@ -1079,6 +1079,8 @@ export const service: Service = {
   },
   async fetch({ addr, coin, verbose }) {
     const contract = contracts.find((x) => x.symbol === coin)
+
+    if (!contract) throw new Error(`${coin} isn't supported`)
 
     const url = `https://api.tokenbalance.com/balance/${contract.address}/${addr}`
 

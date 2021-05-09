@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+import { fetch } from 'fetch-h2'
 import { Service } from '../index'
 
 const multiplier = Math.pow(10, 8)
@@ -6,16 +6,19 @@ const multiplier = Math.pow(10, 8)
 export const service: Service = {
   supported: ['BTC', 'LTC', 'DASH', 'DOGE', 'ETH'],
   check(addr) {
-    return RegExp('^[LXD13][a-km-zA-HJ-NP-Z0-9]{26,33}$').test(addr)
+    return /^[1LMX3D][a-km-zA-HJ-NP-Z1-9]{26,33}$/.test(addr)
   },
   symbol(addr) {
-    return {
-      1: 'BTC',
-      3: 'BTC',
-      L: 'LTC',
-      X: 'DASH',
-      D: 'DOGE'
-    }[addr[0]]
+    return (
+      {
+        1: 'BTC',
+        3: 'BTC',
+        L: 'LTC',
+        M: 'LTC',
+        X: 'DASH',
+        D: 'DOGE'
+      }[addr[0]] || 'BTC'
+    )
   },
   async fetch({ addr, apiKey, verbose }) {
     const network = this.symbol(addr)

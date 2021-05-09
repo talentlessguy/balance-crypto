@@ -1,11 +1,11 @@
 import { Service } from '..'
-import fetch from 'node-fetch'
+import { fetch } from 'fetch-h2'
 
 export const service: Service = {
   supported: ['ADA'],
 
   check(addr) {
-    return RegExp('/[1-9A-HJ-NP-Za-km-z]{104}/').test(addr)
+    return /[1-9A-HJ-NP-Za-km-z]{104,106}/.test(addr)
   },
 
   symbol() {
@@ -15,7 +15,7 @@ export const service: Service = {
   async fetch({ addr, coin, verbose }) {
     const url = `https://explorer.cardano.org/graphql`
 
-    const body = {
+    const json = {
       query:
         'query searchForPaymentAddress($address: String!) {\n  transactions_aggregate(where: {_or: [{inputs: {address: {_eq: $address}}}, {outputs: {address: {_eq: $address}}}]}) {\n    aggregate {\n      count\n    }\n  }\n  paymentAddresses(addresses: [$address]) {\n    summary {\n      assetBalances {\n        asset {\n          assetName\n          description\n          fingerprint\n          name\n          policyId\n          ticker\n        }\n        quantity\n      }\n    }\n  }\n}\n',
       variables: {
@@ -27,7 +27,7 @@ export const service: Service = {
 
     const res = await fetch(url, {
       method: 'POST',
-      body
+      json
     })
 
     if (res.status < 200 || res.status >= 300) throw new Error(JSON.stringify(res))
