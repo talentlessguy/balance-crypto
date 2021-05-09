@@ -54,14 +54,13 @@ Result:
 
 ## Supported cryptos
 
-| Asset                     | Service                                                           | Optional API key |
-| ------------------------- | ----------------------------------------------------------------- | ---------------- |
-| ETH                       | https://ethplorer.io                                              | ✔️               |
-| ERC20 Tokens (except ETH) | https://tokenbalance.com                                          |                  |
-| BTC, DASH, LTC, DOGE      | https://blockcypher.com                                           | ✔️               |
-| BTC-based tokens          | https://chainz.cryptoid.info                                      |                  |
-| USDC, NGNT                | [stablecoin-api](https://github.com/talentlessguy/stablecoin-api) | ✔️               |
-| ADA                       | https://explorer.cardano.org                                      |                  |
+| Asset                | Service                      | Optional API key |
+| -------------------- | ---------------------------- | ---------------- |
+| ETH                  | https://ethplorer.io         | ✔️               |
+| ERC-20 Tokens        | https://ethplorer.io         | ✔️               |
+| BTC, DASH, LTC, DOGE | https://blockcypher.com      | ✔️               |
+| BTC-based tokens     | https://chainz.cryptoid.info |                  |
+| ADA                  | https://explorer.cardano.org |                  |
 
 [vulns-badge-url]: https://img.shields.io/snyk/vulnerabilities/npm/balance-crypto.svg?style=flat-square
 [v-badge-url]: https://img.shields.io/npm/v/balance-crypto.svg?style=flat-square

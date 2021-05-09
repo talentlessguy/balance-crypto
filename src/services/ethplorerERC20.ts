@@ -1066,6 +1066,16 @@ const contracts: { address: string; symbol: string; decimal: number }[] = [
     address: '0x5ca9a71b1d01849c0a95490cc00559717fcf0d1d',
     symbol: 'AE',
     decimal: 18
+  },
+  {
+    address: '0x05bbed16620b352a7f889e23e3cf427d1d379ffe',
+    decimal: 2,
+    symbol: 'NGNT'
+  },
+  {
+    address: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+    decimal: 6,
+    symbol: 'USDC'
   }
 ]
 
@@ -1074,23 +1084,20 @@ export const service: Service = {
   check(addr) {
     return RegExp('^(0x)?[0-9a-fA-F]{40}$').test(addr)
   },
-  symbol() {
-    return 'ETH'
-  },
-  async fetch({ addr, coin, verbose }) {
+  async fetch({ addr, coin, verbose, apiKey = 'freekey' }) {
     const contract = contracts.find((x) => x.symbol === coin)
 
     if (!contract) throw new Error(`${coin} isn't supported`)
 
-    const url = `https://api.tokenbalance.com/balance/${contract.address}/${addr}`
+    const url = `https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=${contract.address}&address=${addr}&tag=latest&apikey=${apiKey}`
 
     if (verbose) console.log(`Requesting ${url}`)
 
     const res = await fetch(url)
 
-    const json = await res.json()
+    if (res.status < 200 || res.status >= 300) throw new Error(await res.text())
 
-    if (res.status < 200 || res.status >= 300) throw new Error(JSON.stringify(json))
+    const json = await res.json()
 
     return {
       asset: coin,

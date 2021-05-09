@@ -20,7 +20,7 @@
   },
   "scripts": {
     "prebuild": "rm -rf dist",
-    "prepare": "npm run build && npm run test",
+    "prepare": "npm run build",
     "build": "tsup src/index.ts --format esm --dts",
     "test": "node --loader ts-node/esm --experimental-specifier-resolution=node node_modules/uvu/bin.js",
     "test:coverage": "c8 --include=src pnpm test",
@@ -55,8 +55,7 @@
     "uvu": "^0.5.1"
   },
   "dependencies": {
-    "fetch-h2": "^2.5.1",
-    "stablecoin-api": "github:talentlessguy/stablecoin-api"
+    "fetch-h2": "^2.5.1"
   },
   "engines": {
     "node": ">=12.4"

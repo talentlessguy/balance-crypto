@@ -8,10 +8,6 @@ export const service: Service = {
     return /[1-9A-HJ-NP-Za-km-z]{104,106}/.test(addr)
   },
 
-  symbol() {
-    return 'ADA'
-  },
-
   async fetch({ addr, coin, verbose }) {
     const url = `https://explorer.cardano.org/graphql`
 

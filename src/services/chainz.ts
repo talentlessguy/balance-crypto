@@ -8,10 +8,6 @@ export const service: Service = {
     return RegExp('^[SMD][a-km-zA-HJ-NP-Z0-9]{26,33}$').test(addr)
   },
 
-  symbol() {
-    return 'BTC'
-  },
-
   async fetch({ addr, coin, verbose }) {
     const url = `https://chainz.cryptoid.info/${coin.toLowerCase()}/api.dws?q=getbalance&a=${addr}`
 

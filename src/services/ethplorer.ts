@@ -6,9 +6,6 @@ export const service: Service = {
   check(addr) {
     return RegExp('^(0x)?[0-9a-fA-F]{40}$').test(addr)
   },
-  symbol() {
-    return 'ETH'
-  },
   async fetch({ addr, apiKey = 'freekey', verbose }) {
     const url = `https://api.ethplorer.io/getAddressInfo/${addr}?apiKey=${apiKey}`
     if (verbose) console.log(`Requesting ${url}`)

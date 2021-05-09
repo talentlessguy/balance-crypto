@@ -1,6 +1,6 @@
 import services from './services'
 
-type WalletInfo = { asset: string; balance: number }
+export type WalletInfo = { asset: string; balance: number }
 
 /**
  * Wallet balance service interface
@@ -14,7 +14,6 @@ export type Service = {
    * Check if it supports the specified address of a token
    */
   check: (addr: string) => boolean
-  symbol: (addr: string) => string
   /**
    * Fetch data from the service and return the formatted response object
    */
