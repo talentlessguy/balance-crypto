@@ -5,7 +5,7 @@
 ![Vulnerabilities][vulns-badge-url]
 [![Version][v-badge-url]][npm-url]
 ![Last commit][last-commit-badge-url]
-![Minified size][size-badge-url] [![Downloads][dl-badge-url]][npm-url]
+![Minified size][size-badge-url] [![Downloads][dl-badge-url]][npm-url] [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/talentlessguy/tinyhttp/CI?style=flat-square)][github-actions] [![Codecov][cov-badge-url]][cov-url]
 
 Get wallet balance for 300+ cryptos with a unified interface.
 
@@ -70,3 +70,4 @@ Result:
 [cov-badge-url]: https://img.shields.io/codecov/c/gh/talentlessguy/balance-crypto?style=flat-square
 [cov-url]: https://codecov.io/gh/talentlessguy/balance-crypto
 [dl-badge-url]: https://img.shields.io/npm/dt/balance-crypto?style=flat-square
+[github-actions]: https://github.com/talentlessguy/balance-crypto/actions
