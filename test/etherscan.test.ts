@@ -5,7 +5,7 @@ import * as dotenv from '@tinyhttp/dotenv'
 
 dotenv.config()
 
-const t = suite('ethplorer')
+const t = suite('etherscan.io')
 
 t('should reject invalid address', async () => {
   try {

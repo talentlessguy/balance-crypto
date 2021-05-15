@@ -2,7 +2,7 @@ import { suite } from 'uvu'
 import * as assert from 'uvu/assert'
 import { balance } from '../src/index'
 
-const t = suite('blockcypher')
+const t = suite('api.blockcypher.com')
 
 t('should reject invalid address', async () => {
   try {
