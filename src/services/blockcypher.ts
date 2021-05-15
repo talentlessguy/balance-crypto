@@ -25,7 +25,7 @@ export const service: BlockCypherService = {
   check(addr) {
     return /^[1LMX3D][a-km-zA-HJ-NP-Z1-9]{26,33}$/.test(addr)
   },
-
+  apiKey: 'blockcypher',
   async fetch({ addr, apiKey, verbose }) {
     const network = {
       1: 'BTC',

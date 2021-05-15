@@ -1,8 +1,11 @@
 import { suite } from 'uvu'
 import * as assert from 'uvu/assert'
 import { balance } from '../src/index'
+import * as dotenv from '@tinyhttp/dotenv'
 
-const t = suite('ethplorer ERC-20')
+dotenv.config()
+
+const t = suite('ethplorer')
 
 t('should reject invalid address', async () => {
   try {
@@ -13,12 +16,20 @@ t('should reject invalid address', async () => {
   }
 })
 
+t('should support ETH', async () => {
+  const result = await balance('0xD3B282e9880cDcB1142830731cD83f7ac0e1043f', 'ETH', {
+    apiKeys: {
+      etherscan: process.env.ETHERSCAN_KEY
+    }
+  })
+
+  assert.is.not(result?.balance, null)
+
+  assert.is(result?.asset, 'ETH')
+})
+
 t('should support ETH-based tokens', async () => {
   const balances = [
-    {
-      coin: 'AE',
-      address: '0x158D6727B17aaBa726D7318ac7dcA5edf8fAf6f8'
-    },
     {
       coin: 'LINK',
       address: '0xcd0da1c9b0DA7D2b862bbF813cB50f76F2fB4F5d'
@@ -30,7 +41,11 @@ t('should support ETH-based tokens', async () => {
   ]
 
   for (const b of balances) {
-    const result = await balance(b.address, b.coin)
+    const result = await balance(b.address, b.coin, {
+      apiKeys: {
+        etherscan: process.env.ETHERSCAN_KEY
+      }
+    })
 
     assert.is.not(result?.balance, null)
 

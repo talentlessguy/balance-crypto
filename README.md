@@ -7,11 +7,11 @@
 ![Last commit][last-commit-badge-url]
 ![Minified size][size-badge-url] [![Downloads][dl-badge-url]][npm-url] [![GitHub Workflow Status][gh-actions-img]][github-actions] [![Codecov][cov-badge-url]][cov-url]
 
-Get wallet balance for 300+ cryptos with a unified interface.
+Get wallet balance for 2000+ cryptos with a unified interface.
 
 ### Comparison to [crypto-balances-2](https://github.com/danielheyman/crypto-balances):
 
-- 🔐 optional API keys support
+- 🔐 API keys support (for EtherScan and BlockCypher)
 - 💙 written in TypeScript
 - ⚡ uses `node-fetch` instead of deprecated `request`
 - 📦 smaller library size
@@ -32,7 +32,13 @@ npm i balance-crypto
 ```ts
 import { balance } from 'balance-crypto'
 
-balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', 'OPTIONAL_API_KEY').then((res) => console.log(res))
+balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', {
+  keys: {
+    etherscan: process.env.ETHERSCAN_KEY,
+    blockcypher: process.env.BLOCKYCPHER_KEY
+  },
+  verbose: true
+}).then((res) => console.log(res))
 ```
 
 Result:
@@ -41,26 +47,14 @@ Result:
 { "balance": 0, "asset": "BTC" }
 ```
 
-## API
-
-### `balance(addr, coin, key, verbose)`
-
-#### Options
-
-- **addr** - wallet address
-- **coin** - asset token
-- **key** - optional API key
-- **verbose** - enable verbose logging
-
 ## Supported cryptos
 
-| Asset                | Service                      | Optional API key |
-| -------------------- | ---------------------------- | ---------------- |
-| ETH                  | https://ethplorer.io         | ✔️               |
-| ERC-20 Tokens        | https://ethplorer.io         | ✔️               |
-| BTC, DASH, LTC, DOGE | https://blockcypher.com      | ✔️               |
-| BTC-based tokens     | https://chainz.cryptoid.info |                  |
-| ADA                  | https://explorer.cardano.org |                  |
+| Asset                | Service                      | API key       |
+| -------------------- | ---------------------------- | ------------- |
+| ETH, ERC-20 tokens   | https://etherscan.io         | ✔️            |
+| BTC, DASH, LTC, DOGE | https://blockcypher.com      | ✔️ (optional) |
+| BTC-based tokens     | https://chainz.cryptoid.info |               |
+| ADA                  | https://explorer.cardano.org |               |
 
 [vulns-badge-url]: https://img.shields.io/snyk/vulnerabilities/npm/balance-crypto.svg?style=flat-square
 [v-badge-url]: https://img.shields.io/npm/v/balance-crypto.svg?style=flat-square
