@@ -1,11 +1,12 @@
 import { Service } from '..'
 import { fetch } from 'fetch-h2'
+import { isValidAddressV1 } from '../util/validateAda'
 
 export const service: Service = {
   supported: ['ADA'],
 
   check(addr) {
-    return /[1-9A-HJ-NP-Za-km-z]{104,106}/.test(addr)
+    return isValidAddressV1(addr)
   },
 
   async fetch({ addr, coin, verbose }) {
