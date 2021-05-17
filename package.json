@@ -1,23 +1,13 @@
 {
   "name": "balance-crypto",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Get wallet balance for 300+ cryptos with a unified interface",
-  "main": "dist/index.js",
   "type": "module",
   "files": [
     "dist"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.js"
-    },
-    "./": {
-      "import": "./dist/index.js"
-    },
-    "./package.json": {
-      "import": "./package.json"
-    }
-  },
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "prebuild": "rm -rf dist",
     "prepare": "npm run build",
