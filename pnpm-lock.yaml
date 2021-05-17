@@ -3,26 +3,26 @@ lockfileVersion: 5.3
 specifiers:
   '@tinyhttp/dotenv': ^1.3.0
   '@types/node': ^15.3.0
-  '@typescript-eslint/eslint-plugin': ^4.22.0
-  '@typescript-eslint/parser': ^4.22.0
+  '@typescript-eslint/eslint-plugin': ^4.23.0
+  '@typescript-eslint/parser': ^4.23.0
   c8: ^7.7.2
   cbor-js: ^0.1.0
   crc: ^3.8.0
-  erc20-balance: ^0.1.4
+  erc20-balance: ^0.1.6
   eslint: ^7.26.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-prettier: ^3.4.0
-  fetch-h2: ^2.5.1
+  fetch-h2: ^3.0.0
   ts-node: ^9.1.1
-  tsup: ^4.10.1
+  tsup: ^4.11.0
   typescript: ^4.2.4
   uvu: ^0.5.1
 
 dependencies:
   cbor-js: 0.1.0
   crc: 3.8.0
-  erc20-balance: 0.1.4
-  fetch-h2: 2.5.1
+  erc20-balance: 0.1.6
+  fetch-h2: 3.0.0
 
 devDependencies:
   '@tinyhttp/dotenv': 1.3.0
@@ -34,7 +34,7 @@ devDependencies:
   eslint-config-prettier: 8.3.0_eslint@7.26.0
   eslint-plugin-prettier: 3.4.0_e77b43c2325f6078f0f0a07c59149bb4
   ts-node: 9.1.1_typescript@4.2.4
-  tsup: 4.10.1_typescript@4.2.4
+  tsup: 4.11.0_typescript@4.2.4
   typescript: 4.2.4
   uvu: 0.5.1
 
@@ -573,8 +573,8 @@ packages:
       ansi-colors: 4.1.1
     dev: true
 
-  /erc20-balance/0.1.4:
-    resolution: {integrity: sha512-kmSZZDdh6Lp6oWF9F+sT4rQ3VsZpNdqahFwancKzRFlT8OqPpKy4hxkGh0LGWo3+DGTlG9BP9fMLMtr9YfL2BA==}
+  /erc20-balance/0.1.6:
+    resolution: {integrity: sha512-p+u6pMjJVzvebrjPLrmonjdCdNbasxjCdYOb/fgAJDkkmVfBuM6dYGH4wJyZz/B79VQ1ibI6cfAjnr1b11muOQ==}
     engines: {node: '>=12.4'}
     dev: false
 
@@ -584,8 +584,8 @@ packages:
       is-arrayish: 0.2.1
     dev: true
 
-  /esbuild/0.11.18:
-    resolution: {integrity: sha512-KD7v4N9b5B8bxPUNn/3GA9r0HWo4nJk3iwjZ+2zG1ffg+r8ig+wqj7sW6zgI6Sn4/B2FnbzqWxcAokAGGM5zwQ==}
+  /esbuild/0.11.23:
+    resolution: {integrity: sha512-iaiZZ9vUF5wJV8ob1tl+5aJTrwDczlvGP0JoMmnpC2B0ppiMCu8n8gmy5ZTGl5bcG081XBVn+U+jP+mPFm5T5Q==}
     hasBin: true
     requiresBuild: true
     dev: true
@@ -789,9 +789,9 @@ packages:
       reusify: 1.0.4
     dev: true
 
-  /fetch-h2/2.5.1:
-    resolution: {integrity: sha512-U+LQ+fHwF6TMg82A88wjljC5L174eoJfrc+0g4e7JWqL7U0w0QAoOkPDCGkO9KGH9BY55s4n45gLGOtlTAoqmw==}
-    engines: {node: '>=10.4'}
+  /fetch-h2/3.0.0:
+    resolution: {integrity: sha512-3QU0Gg0qY5SV1zJcc0gGA1QijsAPyZrZWQq+vYIg+296TVWZiryFfLrCzIGKwOWEl58Xo0pGyogiId7/vZL3tw==}
+    engines: {node: '>=12'}
     dependencies:
       '@types/tough-cookie': 4.0.0
       already: 1.13.2
@@ -1393,8 +1393,8 @@ packages:
       glob: 7.1.7
     dev: true
 
-  /rollup/2.46.0:
-    resolution: {integrity: sha512-qPGoUBNl+Z8uNu0z7pD3WPTABWRbcOwIrO/5ccDJzmrtzn0LVf6Lj91+L5CcWhXl6iWf23FQ6m8Jkl2CmN1O7Q==}
+  /rollup/2.48.0:
+    resolution: {integrity: sha512-wl9ZSSSsi5579oscSDYSzGn092tCS076YB+TQrzsGuSfYyJeep8eEWj0eaRjuC5McuMNmcnR8icBqiE/FWNB1A==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -1647,8 +1647,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tsup/4.10.1_typescript@4.2.4:
-    resolution: {integrity: sha512-QP4Hg48V/0Vosts5FK72CN3ERves0cXhVy5zKWKYxZO7mN/uuWOqUUF1cvAxqTKt17dpLaKFvlZ/OD7x1L2T/g==}
+  /tsup/4.11.0_typescript@4.2.4:
+    resolution: {integrity: sha512-bkFj3J1NwkRfhUFKtr7X8CQgoSL41tmAlEPQgKcOMQS7+kxfTnrAKKq5mOT2hufcYP83Dsc67uwJUkkEC7XJLA==}
     hasBin: true
     peerDependencies:
       typescript: ^4.2.3
@@ -1660,13 +1660,13 @@ packages:
       chalk: 4.1.1
       chokidar: 3.5.1
       debug: 4.3.1
-      esbuild: 0.11.18
+      esbuild: 0.11.23
       execa: 5.0.0
       globby: 11.0.3
       joycon: 3.0.1
       postcss-load-config: 3.0.1
       resolve-from: 5.0.0
-      rollup: 2.46.0
+      rollup: 2.48.0
       sucrase: 3.18.1
       tree-kill: 1.2.2
       typescript: 4.2.4
