@@ -1,5 +1,5 @@
 import { base58 } from '../../src/util/base58.js'
-import cbor from 'https://esm.sh/cbor-js'
+import { encode } from 'https://deno.land/x/cbor@v0.8.2/index.js'
 import CRC from 'https://esm.sh/crc'
 
 /**
@@ -8,8 +8,7 @@ import CRC from 'https://esm.sh/crc'
  */
 function getDecoded(address) {
   try {
-    const decoded = base58(address)
-    return cbor.decode(new Uint8Array(decoded).buffer)
+    return encode(new Uint8Array(base58(address)).buffer)
   } catch (e) {
     // if decoding fails, assume invalid address
     return null
