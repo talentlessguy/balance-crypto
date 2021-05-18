@@ -1,4 +1,4 @@
-import { ERC20Balance } from 'erc20-balance'
+import { ERC20Balance, list } from 'erc20-balance'
 
 export const etherscan = {
   supported: list.map((list) => list.symbol),
