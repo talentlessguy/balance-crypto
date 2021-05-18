@@ -2,6 +2,10 @@ import { suite } from 'uvu'
 import * as assert from 'uvu/assert'
 import { balance } from '../src/index'
 import * as dotenv from '@tinyhttp/dotenv'
+import fetch from 'node-fetch'
+
+// Fetch polyfill
+globalThis.fetch = fetch
 
 dotenv.config()
 

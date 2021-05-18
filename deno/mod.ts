@@ -1,4 +1,4 @@
-import services from './services/index.js'
+import * as services from './services.ts'
 
 export type WalletInfo<T = unknown> = { asset: string; balance: number } & T
 
@@ -53,7 +53,7 @@ export type APIKeys = Partial<{
  */
 export const balance = async (addr: string, coin: string, opts?: { apiKeys?: APIKeys; verbose?: boolean }) => {
   coin = coin.toUpperCase()
-  for (const [s, service] of Object.entries(services as Service[])) {
+  for (const [s, service] of Object.entries(services)) {
     const isSupported = service.supported.includes(coin)
 
     if (isSupported) {
@@ -61,7 +61,7 @@ export const balance = async (addr: string, coin: string, opts?: { apiKeys?: API
 
       const result = await service.fetch({
         addr,
-        apiKey: opts?.apiKeys?.[service.apiKey],
+        apiKey: opts?.apiKeys?.[service.apiKey!],
         coin,
         verbose: opts?.verbose
       })

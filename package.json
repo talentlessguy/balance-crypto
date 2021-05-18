@@ -1,6 +1,6 @@
 {
   "name": "balance-crypto",
-  "version": "0.2.4",
+  "version": "0.2.6",
   "description": "Get wallet balance for 300+ cryptos with a unified interface",
   "type": "module",
   "files": [
@@ -46,6 +46,7 @@
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "node-fetch": "^2.6.1",
     "ts-node": "^9.1.1",
     "tsup": "^4.11.0",
     "typescript": "^4.2.4",
@@ -54,8 +55,7 @@
   "dependencies": {
     "cbor-js": "^0.1.0",
     "crc": "^3.8.0",
-    "erc20-balance": "^0.1.6",
-    "fetch-h2": "^3.0.0"
+    "erc20-balance": "^0.1.8"
   },
   "engines": {
     "node": ">=12.4"

@@ -1,8 +1,6 @@
-import { Service } from '..'
-import { fetch } from 'fetch-h2'
-import { isValidAddressV1 } from '../util/validateAda'
+import { isValidAddressV1 } from '../util/validateAda.js'
 
-export const service: Service = {
+export const cardano = {
   supported: ['ADA'],
 
   check(addr) {
@@ -24,7 +22,10 @@ export const service: Service = {
 
     const res = await fetch(url, {
       method: 'POST',
-      json
+      body: JSON.stringify(json),
+      headers: {
+        'content-type': 'application/json'
+      }
     })
 
     if (res.status < 200 || res.status >= 300) throw new Error(JSON.stringify(res))

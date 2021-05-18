@@ -11,10 +11,10 @@ for (let i = 0; i < ALPHABET.length; ++i) ALPHABET_MAP[ALPHABET.charAt(i)] = i
 
 const BASE = ALPHABET.length
 
-export const base58 = (string: string) => {
+export const base58 = (string) => {
   if (string.length === 0) return []
 
-  let i: number, j: number
+  let i, j
   const bytes = [0]
   for (i = 0; i < string.length; ++i) {
     const c = string[i]

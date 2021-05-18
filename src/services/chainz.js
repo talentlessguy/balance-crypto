@@ -1,7 +1,4 @@
-import { Service } from '..'
-import { fetch } from 'fetch-h2'
-
-export const service: Service = {
+export const chainz = {
   supported: [
     '42',
     '2give',

@@ -1,8 +1,12 @@
-import { base58 } from './base58'
+import { base58 } from './base58.js'
 import cbor from 'cbor-js'
 import CRC from 'crc'
 
-function getDecoded(address: string) {
+/**
+ *
+ * @param {string} address
+ */
+function getDecoded(address) {
   try {
     const decoded = base58(address)
     return cbor.decode(new Uint8Array(decoded).buffer)
@@ -12,7 +16,12 @@ function getDecoded(address: string) {
   }
 }
 
-export function isValidAddressV1(address: string) {
+/**
+ *
+ * @param {string} address
+ * @returns {boolean}
+ */
+export function isValidAddressV1(address) {
   const decoded = getDecoded(address)
 
   if (!decoded || (!Array.isArray(decoded) && decoded.length != 2)) {

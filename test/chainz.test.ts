@@ -1,6 +1,10 @@
 import { suite } from 'uvu'
 import * as assert from 'uvu/assert'
 import { balance } from '../src/index'
+import fetch from 'node-fetch'
+
+// Fetch polyfill
+globalThis.fetch = fetch
 
 const t = suite('chainz.cryptoid.info')
 

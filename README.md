@@ -31,6 +31,10 @@ npm i balance-crypto
 
 ```ts
 import { balance } from 'balance-crypto'
+import fetch from 'node-fetch'
+
+// Fetch polyfill
+globalThis.fetch = fetch
 
 balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', {
   keys: {

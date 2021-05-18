@@ -1,26 +1,4 @@
-import { fetch } from 'fetch-h2'
-import type { Service, WalletInfo } from '../index'
-
-const multiplier = Math.pow(10, 8)
-
-type BlockCypherService = Omit<Service, 'fetch'> & {
-  /**
-   * Fetch data from the service and return the formatted response object
-   */
-  fetch: ({
-    addr,
-    apiKey,
-    coin,
-    verbose
-  }: {
-    addr: string
-    apiKey?: string
-    coin?: string
-    verbose?: boolean
-  }) => WalletInfo | Promise<WalletInfo>
-}
-
-export const service: BlockCypherService = {
+export const blockcypher = {
   supported: ['BTC', 'LTC', 'DASH', 'DOGE', 'ETH'],
   check(addr) {
     return /^[1LMX3D][a-km-zA-HJ-NP-Z1-9]{26,33}$/.test(addr)
@@ -49,7 +27,7 @@ export const service: BlockCypherService = {
     if (res.status < 200 || res.status >= 300) throw new Error(JSON.stringify(res))
 
     return {
-      balance: parseFloat(json.balance) / multiplier,
+      balance: parseFloat(json.balance) / Math.pow(10, 8),
       asset: network
     }
   }

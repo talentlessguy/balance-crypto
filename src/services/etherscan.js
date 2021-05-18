@@ -1,9 +1,6 @@
-import { Service } from '..'
 import { ERC20Balance } from 'erc20-balance'
-import list from 'erc20-balance/dist/list.json'
-import { fetch } from 'fetch-h2'
 
-export const service: Service = {
+export const etherscan = {
   supported: list.map((list) => list.symbol),
   check(addr) {
     return RegExp('^(0x)?[0-9a-fA-F]{40}$').test(addr)

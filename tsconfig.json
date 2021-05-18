@@ -10,6 +10,7 @@
     "noEmit": true,
     "lib": ["ES2019", "DOM"],
     "preserveSymlinks": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "allowJs": true
   }
 }
