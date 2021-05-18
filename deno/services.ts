@@ -1,5 +1,5 @@
 import type { Service } from './mod.ts'
-import { ERC20Balance, list } from 'https://deno.land/x/erc20_balance@0.1.11/mod.ts'
+import { ERC20Balance, list } from 'https://deno.land/x/erc20_balance@0.1.14/mod.ts'
 import { isValidAddressV1 } from './util/validateAda.js'
 
 export { chainz } from '../src/services/chainz.js'

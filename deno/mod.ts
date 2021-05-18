@@ -29,7 +29,7 @@ export type Service<T = unknown> = {
     verbose
   }: {
     addr: string
-    apiKey?: keyof API
+    apiKey?: string
     coin: string
     verbose?: boolean
   }) => WalletInfo<T> | Promise<WalletInfo<T>>
