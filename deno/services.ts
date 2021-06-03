@@ -5,7 +5,7 @@ import { isValidAddressV1 } from './util/validateAda.js'
 export { chainz } from '../src/services/chainz.js'
 
 export const blockcypher: Service = {
-  supported: ['BTC', 'LTC', 'DASH', 'DOGE', 'ETH'],
+  supported: ['BTC', 'LTC', 'DASH', 'DOGE'],
   check(addr) {
     return /^[1LMX3D][a-km-zA-HJ-NP-Z1-9]{26,33}$/.test(addr)
   },
