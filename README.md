@@ -15,6 +15,7 @@ Get wallet balance for 2000+ cryptocurrencies with a single function.
 - 💙 written in TypeScript
 - ⚡ uses `node-fetch` instead of deprecated `request`
 - 📦 smaller library size
+- 🦕 Deno and Node.js support
 
 ## Install
 
@@ -27,7 +28,11 @@ yarn add balance-crypto
 npm i balance-crypto
 ```
 
+To use the module in Deno import it like this: `import { balance } from 'https://deno.land/x/balance-crypto/deno/mod.ts'`
+
 ## Example
+
+### Node.js
 
 ```ts
 import { balance } from 'balance-crypto'
@@ -40,6 +45,20 @@ balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', {
   keys: {
     etherscan: process.env.ETHERSCAN_KEY,
     blockcypher: process.env.BLOCKYCPHER_KEY
+  },
+  verbose: true
+}).then((res) => console.log(res))
+```
+
+### Deno
+
+```ts
+import { balance } from 'https://deno.land/x/balance-crypto/deno/mod.ts'
+
+balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', {
+  keys: {
+    etherscan: Deno.env.get('ETHERSCAN_KEY;),
+    blockcypher: Deno.env.get('BLOCKYCPHER_KEY')
   },
   verbose: true
 }).then((res) => console.log(res))
