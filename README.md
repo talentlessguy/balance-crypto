@@ -7,7 +7,7 @@
 ![Last commit][last-commit-badge-url]
 ![Minified size][size-badge-url] [![Downloads][dl-badge-url]][npm-url] [![GitHub Workflow Status][gh-actions-img]][github-actions] [![Codecov][cov-badge-url]][cov-url]
 
-Get wallet balance for 2000+ cryptos with a unified interface.
+Get wallet balance for 2000+ cryptocurrencies with a single function.
 
 ### Comparison to [crypto-balances-2](https://github.com/danielheyman/crypto-balances):
 
