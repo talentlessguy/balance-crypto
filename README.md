@@ -5,7 +5,7 @@
 ![Vulnerabilities][vulns-badge-url]
 [![Version][v-badge-url]][npm-url]
 ![Last commit][last-commit-badge-url]
-![Minified size][size-badge-url] [![Downloads][dl-badge-url]][npm-url] [![GitHub Workflow Status][gh-actions-img]][github-actions] [![Codecov][cov-badge-url]][cov-url]
+![Minified size][size-badge-url] [![Downloads][dl-badge-url]][npm-url] [![GitHub Workflow Status][gh-actions-img]][github-actions] [![Codecov][cov-badge-url]][cov-url] [![DEV](https://badge.devprotocol.xyz/0xB6927E8c58fF0dAf9446F52fc499B2f78eB811A3)](https://stakes.social/0xB6927E8c58fF0dAf9446F52fc499B2f78eB811A3)
 
 Get wallet balance for 2000+ cryptocurrencies with a single function.
 
@@ -82,8 +82,6 @@ Result:
 ## Donate
 
 The best way to support the project is to stake it on [**DEV**](https://stakes.social/0xB6927E8c58fF0dAf9446F52fc499B2f78eB811A3). Note that you also get rewarded by staking, as well as the project author.
-
-[![DEV](https://badge.devprotocol.xyz/0xB6927E8c58fF0dAf9446F52fc499B2f78eB811A3)](https://stakes.social/0xB6927E8c58fF0dAf9446F52fc499B2f78eB811A3)
 
 [vulns-badge-url]: https://img.shields.io/snyk/vulnerabilities/npm/balance-crypto.svg?style=flat-square
 [v-badge-url]: https://img.shields.io/npm/v/balance-crypto.svg?style=flat-square
