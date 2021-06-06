@@ -79,6 +79,12 @@ Result:
 | BTC-based tokens     | https://chainz.cryptoid.info |               |
 | ADA                  | https://explorer.cardano.org |               |
 
+## Donate
+
+The best way to support the project is to stake it on [**DEV**](https://stakes.social/0x14308514785B216904a41aB817282d25425Cce39). Note that you also get rewarded by staking, as well as the project author.
+
+[![DEV](https://badge.devprotocol.xyz/0x14308514785B216904a41aB817282d25425Cce39)](https://stakes.social/0x14308514785B216904a41aB817282d25425Cce39)
+
 [vulns-badge-url]: https://img.shields.io/snyk/vulnerabilities/npm/balance-crypto.svg?style=flat-square
 [v-badge-url]: https://img.shields.io/npm/v/balance-crypto.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/balance-crypto
