@@ -83,6 +83,8 @@ Result:
 
 The best way to support the project is to stake it on [**DEV**](https://stakes.social/0xB6927E8c58fF0dAf9446F52fc499B2f78eB811A3). Note that you also get rewarded by staking, as well as the project author.
 
+⚠️ first 3 stakers are rewarded with 10DEV as bonus ⚠️
+
 [vulns-badge-url]: https://img.shields.io/snyk/vulnerabilities/npm/balance-crypto.svg?style=flat-square
 [v-badge-url]: https://img.shields.io/npm/v/balance-crypto.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/balance-crypto
