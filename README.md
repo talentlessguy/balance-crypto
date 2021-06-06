@@ -13,7 +13,7 @@ Get wallet balance for 2000+ cryptocurrencies with a single function.
 
 - 🔐 API keys support (for EtherScan and BlockCypher)
 - 💙 written in TypeScript
-- ⚡ uses `node-fetch` instead of deprecated `request`
+- ⚡ doesn't depend on request libraries
 - 📦 smaller library size
 - 🦕 Deno and Node.js support
 
