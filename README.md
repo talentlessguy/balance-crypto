@@ -28,7 +28,7 @@ yarn add balance-crypto
 npm i balance-crypto
 ```
 
-To use the module in Deno import it like this: `import { balance } from 'https://deno.land/x/balance-crypto/deno/mod.ts'`
+To use the module in Deno import it like this: `import { balance } from 'https://deno.land/x/balance_crypto/deno/mod.ts'`
 
 ## Example
 
@@ -53,7 +53,7 @@ balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', {
 ### Deno
 
 ```ts
-import { balance } from 'https://deno.land/x/balance-crypto/deno/mod.ts'
+import { balance } from 'https://deno.land/x/balance_crypto/deno/mod.ts'
 
 balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', {
   keys: {
