@@ -1,4 +1,9 @@
 import { ERC20Balance, list } from 'erc20-balance'
+import fetch from 'node-fetch'
+
+if (!globalThis.fetch) {
+	globalThis.fetch = fetch
+}
 
 export const etherscan = {
   supported: list.map((list) => list.symbol),
