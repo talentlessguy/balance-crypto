@@ -62,7 +62,7 @@ import { balance } from 'https://deno.land/x/balance_crypto/deno/mod.ts'
 
 balance('3PxedDftWBXujWtr7TbWQSiYTsZJoMD8K5', 'BTC', {
   keys: {
-    etherscan: Deno.env.get('ETHERSCAN_KEY;),
+    etherscan: Deno.env.get('ETHERSCAN_KEY'),
     blockcypher: Deno.env.get('BLOCKYCPHER_KEY')
   },
   verbose: true
