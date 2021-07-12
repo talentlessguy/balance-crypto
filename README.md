@@ -12,7 +12,7 @@
 
 
 
-Get wallet balance for 2000+ cryptocurrencies with a single function.
+Get wallet balance for 2.3K+ cryptocurrencies with a single function.
 
 ### Comparison to [crypto-balances-2](https://github.com/danielheyman/crypto-balances):
 
