@@ -7,12 +7,10 @@
 ![Vulnerabilities][vulns-badge-url]
 [![Version][v-badge-url]][npm-url]
 ![Minified size][size-badge-url] [![Downloads][dl-badge-url]][npm-url] [![GitHub Workflow Status][gh-actions-img]][github-actions] [![Codecov][cov-badge-url]][cov-url] [![DEV](https://badge.devprotocol.xyz/0xB6927E8c58fF0dAf9446F52fc499B2f78eB811A3)](https://stakes.social/0xB6927E8c58fF0dAf9446F52fc499B2f78eB811A3)
-  
+
 </div>
 
-
-
-Get wallet balance for 2.5K+ cryptocurrencies with a single function.
+Get wallet balance for 5.8K+ cryptocurrencies with a single function.
 
 ### Comparison to [crypto-balances-2](https://github.com/danielheyman/crypto-balances):
 
