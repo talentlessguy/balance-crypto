@@ -4,7 +4,7 @@ import { balance } from '../src/index'
 import * as dotenv from '@tinyhttp/dotenv'
 import fetch from 'node-fetch'
 
-// Fetch polyfill
+// @ts-ignore fetch polyfill
 globalThis.fetch = fetch
 
 dotenv.config()

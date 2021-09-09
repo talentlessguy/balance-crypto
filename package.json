@@ -10,7 +10,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "prebuild": "rm -rf dist",
-    "prepare": "npm run build",
+    "prepare": "pnpm build && pnpm test",
     "build": "tsup src/index.ts --format esm --dts",
     "test": "node --loader ts-node/esm --experimental-specifier-resolution=node node_modules/uvu/bin.js",
     "test:coverage": "c8 --include=src pnpm test",

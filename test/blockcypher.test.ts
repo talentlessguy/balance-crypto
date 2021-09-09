@@ -4,7 +4,7 @@ import { balance } from '../src/index'
 
 import fetch from 'node-fetch'
 
-// Fetch polyfill
+// @ts-ignore fetch polyfill
 globalThis.fetch = fetch
 
 const t = suite('api.blockcypher.com')
