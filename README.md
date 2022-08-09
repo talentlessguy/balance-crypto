@@ -6,9 +6,7 @@
 
 ![Vulnerabilities][vulns-badge-url]
 [![Version][v-badge-url]][npm-url]
-![Minified size][size-badge-url] [![Downloads][dl-badge-url]][npm-url] [![GitHub Workflow Status][gh-actions-img]][github-actions] [![Codecov][cov-badge-url]][cov-url] [![DEV](https://badge.devprotocol.xyz/0xB6927E8c58fF0dAf9446F52fc499B2f78eB811A3)](https://stakes.social/0xB6927E8c58fF0dAf9446F52fc499B2f78eB811A3)
-
-</div>
+![Minified size][size-badge-url] [![Downloads][dl-badge-url]][npm-url] [![GitHub Workflow Status][gh-actions-img]][github-actions] [![Codecov][cov-badge-url]][cov-url]</div>
 
 Get wallet balance for 5.8K+ cryptocurrencies with a single function.
 
@@ -79,15 +77,6 @@ Result:
 | BTC-based tokens     | https://chainz.cryptoid.info |               |
 | ADA                  | https://explorer.cardano.org |               |
 
-## Donate
-
-The best way to support the project is to stake it on [**DEV**](https://stakes.social/0xB6927E8c58fF0dAf9446F52fc499B2f78eB811A3). Note that you also get rewarded by staking, as well as the project author.
-
-These 3 addresses were rewarded with 10DEV as a bonus for staking:
-
-1. 0xE603eB00619E81d8b4954be13B59D7B6A2DC2B75
-2. 0x257f2d64A2C51584e2e650e9Fd9bC4A0621c549F
-3. 0xDEd284B5c60FFC7BdBe707a10de301D566eCA86D (jerryrigg411420)
 
 [vulns-badge-url]: https://img.shields.io/snyk/vulnerabilities/npm/balance-crypto.svg?style=flat-square
 [v-badge-url]: https://img.shields.io/npm/v/balance-crypto.svg?style=flat-square
